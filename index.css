@@ -1,0 +1,65 @@
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+header {
+  height: 8dvh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: fixed;
+  background-color: transparent;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  transition: height 0.4s, background-color 0.2s;
+}
+
+header.sticky {
+  height: 6dvh;
+  background-color: #cc3333;
+}
+
+header .logo {
+  font-size: 1.5rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero button {
+  background-color: #cc3333;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+}
