@@ -9,7 +9,7 @@
     <script>
       isUserLogged = () => localStorage.getItem("isAuthenticated");
 
-      if (!isUserLogged()) {
+      if (isUserLogged() !== "true") {
         window.location.href = "./login";
       } else {
         window.location.href = "./home";
