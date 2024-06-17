@@ -10,9 +10,9 @@
       isUserLogged = () => localStorage.getItem("isAuthenticated");
 
       if (!isUserLogged()) {
-        window.location.href = "/login";
+        window.location.href = "login";
       } else {
-        window.location.href = "/home";
+        window.location.href = "home";
       }
     </script>
   </body>
