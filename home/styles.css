@@ -3,9 +3,12 @@ html {
   margin: 0 auto;
 }
 
-
 body {
   font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -13,6 +16,7 @@ header {
   width: 100%;
   max-width: 1440px;
   position: fixed;
+  z-index: 1000;
   background-color: transparent;
   color: white;
   display: flex;
@@ -24,11 +28,13 @@ header {
 
 header.sticky {
   height: 6dvh;
-  background-color: #cc3333;
+  background-color: #D03232;
 }
 
 header .logo {
   font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
 }
 
 nav ul {
@@ -45,6 +51,11 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #f0f0f0;
 }
 
 .hero {
@@ -60,14 +71,70 @@ nav ul li a {
   height: auto;
 }
 
-.hero button {
-  background-color: #cc3333;
-  color: white;
-  border: none;
-  padding: 1rem 2rem;
-  cursor: pointer;
-}
-
 section {
   padding: 2rem;
+  background-color: #F5F5F5;
+}
+
+#problema {
+  display: flex;
+  flex-direction: column;
+  background-color: #D03232;
+  gap: 1rem;
+  color: white;
+  padding-top: 10dvh;
+}
+
+#problema h2 {
+  text-align: center;
+}
+
+#problema > div {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+
+#problema img {
+  height: 200px;
+}
+
+.feature, .impacto {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feature h2, .impacto h2 {
+  margin-top: 0;
+}
+
+.feature ul, .impacto ul {
+  list-style: none;
+  padding: 0;
+}
+
+.feature ul li, .impacto ul li {
+  background-color: #f9f9f9;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.feature ul li:hover, .impacto ul li:hover {
+  background-color: #ececec;
+}
+
+#features h1, #impactos h2 {
+  margin-bottom: 2rem;
+  text-align: center;
 }
