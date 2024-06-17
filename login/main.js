@@ -19,7 +19,7 @@ form.addEventListener("submit", (event) => {
     if (isAuthenticated) {
       alert("Login realizado com sucesso!");
       localStorage.setItem("isAuthenticated", true);
-      window.location.href = "/home";
+      window.location.href = "../home";
     } else {
       alert("Email ou senha inválidos.");
       clearFields();

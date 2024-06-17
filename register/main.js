@@ -22,7 +22,7 @@ form.addEventListener("submit", (event) => {
   if (isEmailValid && isPasswordValid && isRepeatPasswordValid) {
     if(userCreated()) {
       alert("Usuário cadastrado com sucesso!");
-      window.location.href = "/login";
+      window.location.href = "../login";
     } else {
       alert("Email já cadastrado.");
     }
