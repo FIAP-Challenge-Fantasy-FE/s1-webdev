@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registre-se - Fórmula E</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../reset.css" />
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <div class="login-header">
+        <img src="logo.png" alt="Fórmula E Logo" />
+        <h1>FÓRMULA E</h1>
+      </div>
+      <div class="login-form">
+        <h2>Registre-se</h2>
+        <form id="loginForm" novalidate>
+          <div class="input-group">
+            <input type="email" id="email" placeholder="Email" />
+            <span class="error-message" id="emailError"
+              >Por favor, preencha o email.</span
+            >
+          </div>
+          <div class="input-group">
+            <input type="password" id="password" placeholder="Senha" />
+            <span class="error-message" id="passwordError"
+              >Por favor, preencha a senha.</span
+            >
+          </div>
+          <div class="input-group">
+            <input
+              type="password"
+              id="repeatPassword"
+              placeholder="Confirme a senha"
+            />
+            <span class="error-message" id="repeatPasswordError"
+              >Por favor, confirme a senha.</span
+            >
+          </div>
+          <div class="register-link">
+            Ainda não é membro? <a href="/login">Cadastre-se</a>
+          </div>
+          <button type="submit">Registrar</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
