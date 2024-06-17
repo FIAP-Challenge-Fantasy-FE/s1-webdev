@@ -18,7 +18,8 @@ form.addEventListener("submit", (event) => {
     const isAuthenticated = verifyLogin();
     if (isAuthenticated) {
       alert("Login realizado com sucesso!");
-      window.location.href = "/index.html";
+      localStorage.setItem("isAuthenticated", true);
+      window.location.href = "/home";
     } else {
       alert("Email ou senha inválidos.");
       clearFields();
