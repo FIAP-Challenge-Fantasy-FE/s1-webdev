@@ -60,11 +60,15 @@ function validateEmailField() {
 }
 
 function validatePasswordField() {
+  const minLength = 8; // set your desired minimum length
+  const specialCharRegex = /[!@#$%^&*(),.?":{}|<>]/g; // regex for special characters
+
   return validateField(
     passwordInput, 
     passwordError, 
-    null, 
-    "Por favor, preencha a senha."
+    (value) => value.length >= minLength && specialCharRegex.test(value), 
+    "Por favor, preencha a senha.",
+    "A senha deve ter pelo menos " + minLength + " caracteres e conter pelo menos um caractere especial ou número."
   );
 }
 
