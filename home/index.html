@@ -3,62 +3,143 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Fórmula E - Experimente o Futuro das Corridas</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <link rel="stylesheet" type="text/css" href="../reset.css" />
-    <script src="main.js" defer></script>
   </head>
   <body>
-    <div class="container">
-      <header>
+    <header>
+      <div class="header-content">
         <a class="logo" href="#">FÓRMULA E</a>
         <nav>
           <ul>
             <li><a href="#problema">Problema</a></li>
             <li><a href="#solucao">Solução</a></li>
+            <li><a href="#features">Recursos</a></li>
             <li><a href="#impactos">Impactos</a></li>
             <li><a href="../login">Login/Cadastre-se</a></li>
           </ul>
         </nav>
-      </header>
-
-      <main class="hero">
-        <img src="../assets/hero-bg.png" alt="Fórmula E Car" />
-      </main>
+        <div class="menu-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="hero-content">
+          <h1>Bem-vindo à Revolução Elétrica</h1>
+          <p>
+            Descubra a emoção da Fórmula E e participe da nova era do
+            automobilismo sustentável.
+          </p>
+          <a href="#solucao" class="cta-button">Saiba Mais</a>
+        </div>
+        <div class="hero-image">
+          <img src="../assets/hero-bg.png" alt="Fórmula E Car" />
+        </div>
+      </section>
 
       <section id="problema">
-        <h2>Problemas</h2>
-        <div>
-          <p>
-            Nos últimos anos, o interesse por esportes eletrônicos e a
-            digitalização de eventos esportivos tradicionais aumentou
-            significativamente. A Fórmula E, é uma categoria de automobilismo
-            para carros elétricos, que tem se destacado por sua proposta
-            sustentável e inovadora. No entanto, há um desafio em atrair um
-            público mais amplo e diversificado, especialmente entre aqueles que
-            ainda não possuem um interesse consolidado pelo automobilismo.
-          </p>
-          <img src="../assets/car-icon.png" alt="Fórmula E Car" />
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>O Problema</h2>
+            <p>Por que a Fórmula E precisa de mais visibilidade?</p>
+          </div>
+          <div class="problema-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="problema-image">
+              <i class="fa-solid fa-triangle-exclamation"></i>
+            </div>
+            <div class="problema-text">
+              <p>
+                Nos últimos anos, o interesse por esportes eletrônicos e a
+                digitalização de eventos esportivos tradicionais aumentou
+                significativamente. A Fórmula E é uma categoria de automobilismo
+                para carros elétricos, que tem se destacado por sua proposta
+                sustentável e inovadora. No entanto, há um desafio em atrair um
+                público mais amplo e diversificado, especialmente entre aqueles
+                que ainda não possuem um interesse consolidado pelo
+                automobilismo.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="solucao">
-        <h2>Solução</h2>
-        <p>
-          Desenvolver um site complementar ao website oficial da Fórmula E,
-          visando engajar pessoas que ainda não possuem interesse pelo esporte,
-          permitindo-as desenvolver uma paixão por meio de interatividade e
-          recompensas.
-        </p>
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>A Solução</h2>
+            <p>Como podemos impulsionar a Fórmula E?</p>
+          </div>
+          <div class="solucao-content" data-aos="fade-up" data-aos-delay="200">
+            <div class="solucao-text">
+              <p>
+                Desenvolver um site complementar ao website oficial da Fórmula
+                E, visando engajar pessoas que ainda não possuem interesse pelo
+                esporte, permitindo-as desenvolver uma paixão por meio de
+                interatividade e recompensas.
+              </p>
+              <a href="#features" class="cta-button">Descubra os Recursos</a>
+            </div>
+            <div class="solucao-image">
+              <i class="fa-solid fa-lightbulb"></i>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="features">
-        <h1>Features</h1>
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>Recursos</h2>
+            <p>O que nossa plataforma oferece</p>
+          </div>
+          <div
+            class="features-grid"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          ></div>
+        </div>
       </section>
 
       <section id="impactos">
-        <h2>Impactos</h2>
+        <div class="container">
+          <div class="section-title" data-aos="fade-up">
+            <h2>Impactos</h2>
+            <p>Os efeitos da nossa iniciativa</p>
+          </div>
+          <div
+            class="impactos-grid"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          ></div>
+        </div>
       </section>
-    </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2023 Fórmula E Brasil. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>

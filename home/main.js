@@ -1,101 +1,118 @@
-const FEATURE_SECTION = document.querySelector('#features');
-const IMPACT_SECTION = document.querySelector('#impactos');
+document.addEventListener('DOMContentLoaded', () => {
+  const FEATURE_SECTION = document.querySelector('.features-grid');
+  const IMPACT_SECTION = document.querySelector('.impactos-grid');
+  const MENU_TOGGLE = document.querySelector('.menu-toggle');
+  const NAV_UL = document.querySelector('nav ul');
 
-const features = [
-  {
-    title: 'Cadastro e Login',
-    items: [
-      'Os usuários podem criar uma conta gratuitamente na plataforma.',
-      'Ao se registrar, os usuários recebem uma quantidade inicial de créditos para apostas.',
-      'Os usuários têm a opção de ganhar créditos adicionais convidando amigos para participar.'
-    ]
-  },
-  {
-    title: 'Apostas',
-    description: 'Os usuários podem escolher entre diversas modalidades de apostas, cada uma com pesos diferentes, incluindo:',
-    items: [
-      'Vencedor da prova.',
-      'Vencedor Top 3 (menores probabilidades).',
-      'Volta mais rápida.',
-      'Head to head (aposta entre 2 pilotos).',
-      'Time vencedor da temporada.',
-      'Melhor equipe.'
-    ]
-  },
-];
+  const features = [
+    {
+      title: 'Cadastro e Login',
+      description: 'Acesse recursos exclusivos criando uma conta gratuita.',
+      iconClass: 'fa-solid fa-user-plus',
+    },
+    {
+      title: 'Apostas',
+      description: 'Diversas modalidades de apostas para você se divertir.',
+      iconClass: 'fa-solid fa-coins',
+    },
+    {
+      title: 'Recompensas',
+      description: 'Ganhe créditos convidando amigos e participando de eventos.',
+      iconClass: 'fa-solid fa-gift',
+    },
+    {
+      title: 'Comunidade',
+      description: 'Conecte-se com outros fãs de Fórmula E e compartilhe experiências.',
+      iconClass: 'fa-solid fa-users',
+    },
+  ];
 
-const impactos = [
-  {
-    title: 'Impactos negativos do problema',
-    items: [
-      'Falta de visibilidade da Fórmula E na mídia nacional e nas redes sociais',
-      'Falta de patrocíonio',
-      'Falta de consumidores do esporte'
-    ]
-  },
-  {
-    title: 'Impactos positivos da solução',
-    items: [
-      'Atrair um público mais amplo e diversificado',
-      'Arrecadar patrocínio de grandes marcas devido ao aumento da visibilidade do esporte',
-      'Consolidar e trazer novamente o auge do automobilsmo no Brasil'
-    ]
-  },
-]
+  const impactos = [
+    {
+      title: 'Aumentar a Visibilidade',
+      description: 'Promover a Fórmula E nas mídias sociais e na mídia nacional.',
+      iconClass: 'fa-solid fa-eye',
+    },
+    {
+      title: 'Atrair Patrocínios',
+      description: 'Com maior visibilidade, atrair grandes marcas para patrocinar o esporte.',
+      iconClass: 'fa-solid fa-handshake',
+    },
+    {
+      title: 'Expandir a Base de Fãs',
+      description: 'Engajar novos espectadores e consolidar o automobilismo no Brasil.',
+      iconClass: 'fa-solid fa-flag-checkered',
+    },
+  ];
 
-window.onscroll = function() {
-  const header = document.querySelector('header');
-  header.classList.toggle('sticky', window.scrollY > 0);
-};
+  window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+  });
 
-features.forEach((feature) => {
-  const featureElement = document.createElement('div');
-  featureElement.classList.add('feature');
+  MENU_TOGGLE.addEventListener('click', () => {
+    MENU_TOGGLE.classList.toggle('active');
+    NAV_UL.classList.toggle('open');
+  });
 
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = feature.title;
+  features.forEach((feature) => {
+    const featureCard = document.createElement('div');
+    featureCard.classList.add('feature-card');
+    featureCard.setAttribute('data-aos', 'fade-up');
 
-  featureElement.appendChild(titleElement);
+    const iconElement = document.createElement('div');
+    iconElement.classList.add('icon');
 
-  if (feature.description) {
+    const icon = document.createElement('i');
+    icon.className = feature.iconClass;
+
+    iconElement.appendChild(icon);
+
+    const titleElement = document.createElement('h3');
+    titleElement.textContent = feature.title;
+
     const descriptionElement = document.createElement('p');
     descriptionElement.textContent = feature.description;
 
-    featureElement.appendChild(descriptionElement);
-  }
+    featureCard.appendChild(iconElement);
+    featureCard.appendChild(titleElement);
+    featureCard.appendChild(descriptionElement);
 
-  const itemsElement = document.createElement('ul');
-  
-  feature.items.forEach((item) => {
-    const itemElement = document.createElement('li');
-    itemElement.textContent = item;
-
-    itemsElement.appendChild(itemElement);
+    FEATURE_SECTION.appendChild(featureCard);
   });
 
-  featureElement.appendChild(itemsElement);
+  impactos.forEach((impacto) => {
+    const impactoCard = document.createElement('div');
+    impactoCard.classList.add('impacto-card');
+    impactoCard.setAttribute('data-aos', 'fade-up');
 
-  FEATURE_SECTION.appendChild(featureElement);
-});
+    const iconElement = document.createElement('div');
+    iconElement.classList.add('icon');
 
-impactos.forEach((impacto) => {
-  const impactoElement = document.createElement('div');
-  impactoElement.classList.add('impacto');
+    const icon = document.createElement('i');
+    icon.className = impacto.iconClass;
 
-  const titleElement = document.createElement('h2');
-  titleElement.textContent = impacto.title;
+    iconElement.appendChild(icon);
 
-  impactoElement.appendChild(titleElement);
+    const contentElement = document.createElement('div');
 
-  const itemsElement = document.createElement('ul');
-  impacto.items.forEach((item) => {
-    const itemElement = document.createElement('li');
-    itemElement.textContent = item;
+    const titleElement = document.createElement('h3');
+    titleElement.textContent = impacto.title;
 
-    itemsElement.appendChild(itemElement);
+    const descriptionElement = document.createElement('p');
+    descriptionElement.textContent = impacto.description;
+
+    contentElement.appendChild(titleElement);
+    contentElement.appendChild(descriptionElement);
+
+    impactoCard.appendChild(iconElement);
+    impactoCard.appendChild(contentElement);
+
+    IMPACT_SECTION.appendChild(impactoCard);
   });
 
-  impactoElement.appendChild(itemsElement);
-
-  IMPACT_SECTION.appendChild(impactoElement);
+  AOS.init({
+    duration: 1000,
+    once: true,
+  });
 });
